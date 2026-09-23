@@ -1,0 +1,40 @@
+{
+  "channels": {
+    "tv": {
+      "adstock_decay": 0.65,
+      "hill_half_sat": 70000,
+      "hill_slope": 1.8,
+      "beta": 1.9
+    },
+    "search": {
+      "adstock_decay": 0.15,
+      "hill_half_sat": 20000,
+      "hill_slope": 2.5,
+      "beta": 3.4
+    },
+    "social": {
+      "adstock_decay": 0.35,
+      "hill_half_sat": 25000,
+      "hill_slope": 1.5,
+      "beta": 1.2
+    },
+    "display": {
+      "adstock_decay": 0.45,
+      "hill_half_sat": 30000,
+      "hill_slope": 1.2,
+      "beta": 0.4
+    }
+  },
+  "contribution_share": {
+    "tv": 0.23344851373692385,
+    "search": 0.5993696857729036,
+    "social": 0.13494197242149408,
+    "display": 0.03223982806867847
+  },
+  "baseline_sales": 400000,
+  "trend_per_week": 350,
+  "seasonality_amplitude": 45000,
+  "price_elasticity": -1.4,
+  "noise_sd": 18000,
+  "media_share_of_sales": 0.4162744043115401
+}

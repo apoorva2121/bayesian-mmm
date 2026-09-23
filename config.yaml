@@ -1,0 +1,35 @@
+# Bayesian Market Mix Modelling — configuration.
+# A simulated dataset with KNOWN ground truth so parameter recovery can be scored.
+
+paths:
+  data: data/mmm_weekly.parquet
+  truth: data/ground_truth.json
+  reports: reports
+  artifacts: artifacts
+
+simulation:
+  n_weeks: 156                     # 3 years of weekly data
+  seed: 7
+  channels:
+    tv:      {mean_spend: 60000, spend_sd: 20000, adstock_decay: 0.65, hill_half_sat: 70000, hill_slope: 1.8, beta: 1.9}
+    search:  {mean_spend: 25000, spend_sd: 8000,  adstock_decay: 0.15, hill_half_sat: 20000, hill_slope: 2.5, beta: 3.4}
+    social:  {mean_spend: 18000, spend_sd: 7000,  adstock_decay: 0.35, hill_half_sat: 25000, hill_slope: 1.5, beta: 1.2}
+    display: {mean_spend: 12000, spend_sd: 5000,  adstock_decay: 0.45, hill_half_sat: 30000, hill_slope: 1.2, beta: 0.4}
+  baseline_sales: 400000
+  trend_per_week: 350
+  seasonality_amplitude: 45000     # annual sine
+  price_elasticity: -1.4           # log-price effect on log-sales, price index ~ 1.0
+  noise_sd: 18000
+
+model:
+  max_lag: 8                       # adstock carryover window
+  draws: 1000
+  tune: 1000
+  chains: 4
+  target_accept: 0.9
+  seed: 42
+
+evaluation:
+  # A parameter is "recovered" if the true value lies inside the 94% HDI.
+  hdi_prob: 0.94
+  budget_reallocation_total: 115000   # weekly total for the optimiser example

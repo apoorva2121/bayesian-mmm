@@ -1,0 +1,12 @@
+[project]
+name = "bayesian-mmm"
+version = "0.1.0"
+description = "Bayesian market mix model (adstock + Hill saturation) with parameter-recovery validation on simulated ground truth"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

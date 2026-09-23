@@ -1,0 +1,12 @@
+{
+  "divergences": 14,
+  "max_r_hat": 1.001704759865382,
+  "shape_params_recovered": 11,
+  "shape_params_total": 12,
+  "share_recovered": 4,
+  "share_total": 4,
+  "price_elasticity_true": -1.4,
+  "price_elasticity_posterior_mean": -0.72700785342557,
+  "runtime_seconds": 340.1,
+  "quick": false
+}
