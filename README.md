@@ -214,3 +214,7 @@ reports/                   parameter_recovery.csv · contribution_share.csv · m
 - **Report the number the business reads (share, ROI), not just the parameters.**
   A decay of 0.62 versus 0.65 is irrelevant; a 4-point contribution-share error
   moves budget.
+
+## Licence
+
+[MIT](LICENSE). All data in this repository is simulated by `simulate.py`, so there are no third-party data terms to observe.
